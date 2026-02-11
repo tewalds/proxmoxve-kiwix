@@ -34,8 +34,7 @@ catch_errors
 
 # --- Data path ---
 echo -e "\n--- ${APP} Configuration ---"
-ZIM_DIR="${1}"
-if [ -z "$ZIM_DIR" ]; then
+if [ -z "${ZIM_DIR:-}" ]; then
   read -p "Enter the path to your ZIM archives directory: " ZIM_DIR
 fi
 if [ ! -d "$ZIM_DIR" ]; then
